@@ -1,0 +1,29 @@
+package com.githubcicdpipeline.gitHubCICDActions;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+
+public class GitHubCiCdActionsApplication {
+
+@GetMapping("/welcome")
+	public String welcome(){
+		return "CICD PIPELINE USING DOCKER AND SPRINGBOOT";
+	}
+
+//	echo "# github-Actions-CiCd-DockerImage" >> README.md
+//	git init
+//	git add README.md
+//	git commit -m "first commit"
+//	git branch -M main
+//	git remote add origin https://github.com/777s999/github-Actions-CiCd-DockerImage.git
+//	git push -u origin main
+	public static void main(String[] args) {
+		SpringApplication.run(GitHubCiCdActionsApplication.class, args);
+	}
+
+}
